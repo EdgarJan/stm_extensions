@@ -6,7 +6,7 @@ extension STMExtensions on String {
     return this[0].toUpperCase() + substring(1);
   }
 
-  String replaceLithuanianCharacters(String input) {
+  String replaceLithuanianCharacters() {
     final Map<String, String> replacements = {
       'ą': 'a',
       'č': 'c',
@@ -27,7 +27,7 @@ extension STMExtensions on String {
       'Ū': 'U',
       'Ž': 'Z'
     };
-    String result = input;
+    String result = this;
     replacements.forEach((lithuanian, english) {
       result = result.replaceAll(lithuanian, english);
     });
